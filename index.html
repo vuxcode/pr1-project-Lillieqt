@@ -1,7 +1,33 @@
 <html>
 <head> 
+  
+ 
+<style>
+
+
+</style>
+
+
 
 <script>
+
+
+//Variables here in the top as Null getting updated later in the program
+
+var PlayerName = null;
+
+var EeveeName = null;
+
+var MomName = null;
+
+var RivalName = null;
+
+var BattleQuestion = null;
+
+var AttackOrDefend = null;
+
+
+
 
 function dots() {
   document.write("... ... ... ...");
@@ -24,11 +50,11 @@ function whatisurname() {
 }
 
 function Playervariable() {
-  let name = prompt("What is your name?");
+ PlayerName = prompt("What is your name?");
 }
 
 function Greet() {
-  document.write("Hi "+name+"!");
+  document.write("Hi "+ PlayerName +"! ");
 }
 
 function Starting() {
@@ -44,9 +70,157 @@ function Waking() {
 }
 
 function PokemonStart() {
-  document.write("*You see a big blue box with a yellow ribbon on it which spells out your name, you open it and inside there are three mysterious red and white pokemonballs.*");
+  document.write("*You see a big blue box with a yellow ribbon on it which spells out your name, you open it and inside there is an mysterious red and white pokemonball.*");
   document.write("<br>");
 }
+
+function PokemonStartTwo() {
+  document.write("*there is also a letter, it says:* Hi! Since it is your 14th Birthday i figured youd like a pokemon for your grand adventure. Much love -Dad.");
+  document.write("<br>");
+}
+
+function PokemonPick() {
+  document.write("*Inside the pokemonball there is a pokemon, Eevee*");
+  document.write("<br>");
+}
+
+function EeveeFirst() {
+  document.write("*You pick up the Red and white pokeball with Eevee inside, as you pick it up you accidentaly drop it and out comes eevee. A small brown fluffy creature.*");
+  document.write("<br>");
+}
+
+function EeveeSecond() {
+  document.write("*You reach your hand down towards the small brown fluffy Eevee and pet it, Eevee Proceeds to lick your hand and smile happily.*");
+  document.write("<br>");
+}
+
+function EeveeNamingText() {
+  document.write("What would you like to name your creature?");
+  document.write("<br>");
+}
+
+function EeveeNaming() {
+ EeveeName = prompt("What would you like to name your Eevee?")
+}
+
+function EeveeNamed() {
+  document.write("Your Eevee is now named " + EeveeName + "!");
+  document.write("<br>");
+}
+
+function EeveeHugging() {
+  document.write("*You pick up " + EeveeName + " And hug it close in your arms*")
+  document.write("<br>");
+}
+
+function EeveeWalkingDownstairs () {
+  document.write("*With " + EeveeName + " in your Arms you walk downstairs and see your Mom working in the kitchen, you remember her but forget her name*");
+  document.write("<br>");
+}
+
+function MomNamingText () {
+  document.write("What is your Mom Named?");
+  document.write("<br>");
+}
+
+function MomNaming () {
+ MomName = prompt("What is your moms Name?");
+}
+
+function MomTalkingOne () {
+  document.write("-Mom Hi! " + PlayerName + " How are you feeling?")
+  document.write("<br>");
+}
+
+function MomTalkingTwo () {
+  document.write("-Mom Nevermind i dont have time right now i need to go run an errand, ill see you later! " + PlayerName );
+  document.write("<br>");
+}
+
+function ThinkingOne () {
+  document.write("*That was strange you think for yourself as you grab a glass of water*");
+  document.write("<br>");
+}
+
+function WaterSplash () {
+  document.write("*you accidentaly splash a little water on " + EeveeName + " And she jumps from your lap scared and shaking her fur to dry as she hits the ground*");
+  document.write("<br>");
+}
+
+function WaterSplashTwo () {
+  document.write("*You look down at " + EeveeName + " and look worried as the doorbell rings, you wonder who it could be. You walk towards the door and check the peephole.*");
+  document.write("<br>");
+}
+
+function DoorOpeningOne () {
+  document.write("*Its your cousin. Your Longtime Rival and grandson of Professor Walnut.*");
+  document.write("<br>");
+}
+
+function RivalNaming () {
+  document.write("What is your longtime rivals Name?");
+  document.write("<br>");
+}
+
+function RivalNamingVar () {
+  RivalName = prompt("What is your Rivals Name?");
+}
+
+function TalkingToRival () {
+  document.write("What do you want " + RivalName + "! *You say to him through the door.*");
+  document.write("<br>");
+}
+
+function TalkingToRivalTwo () {
+  document.write("*" + RivalName + " Says smugly:* Heh. Heard you got your first pokemon and im here to battle you!");
+  document.write("<br>");
+}
+
+function BattleQuestionOne () {
+  document.write("Will you Battle me " + PlayerName  + "? (Yes, No)");
+  document.write("<br>");
+}
+
+function BattleQuestionPrompt () {
+  BattleQuestion = prompt("Yes or No?");
+}
+ 
+function BattleQuestionIf () {
+  if (BattleQuestion === "Yes") {
+    document.write(RivalName + " Heh, You arent Ready for this. Go Snorunt!! -" + PlayerName + " Go " + EeveeName + "!");
+    document.write("<br>");
+    document.write("*You slam open the door and look " + RivalName + " in the eyes*")
+    document.write("<br>");
+    document.write("What will you do? (Attack, Defend)");
+    document.write ("<br>");
+      
+   } 
+    else {
+    document.write("You are really boring huh,, *Says " + RivalName + "*");
+    document.write("<br>");
+    }
+}
+
+function BattleAttackOrDefend () {
+  AttackOrDefend = prompt("Attack or Run?");
+      if (AttackOrDefend === "Attack") {
+        document.write(EeveeName + " Used Tackle!");
+        document.write("<br>");
+        document.write(RivalName + "'s Snorunt Takes significant Damage and Faints");
+        document.write("<br>");
+        document.write("-" + RivalName + " H-how are you so strong, *He says as he runs away with snorunt in his hands*");
+        document.write("<br>");
+      }
+      else {
+        document.write("You lock the door and wait until " + RivalName + " walks away");
+        document.write("<br>");
+      }
+}
+
+
+
+
+// The setTimeouts are made for making everything go in an order 
 
 setTimeout(dots, 1000);
 
@@ -66,6 +240,55 @@ setTimeout(Waking, 16000);
 
 setTimeout(PokemonStart, 19000);
 
+setTimeout(PokemonStartTwo, 22000);
+
+setTimeout(PokemonPick, 25000);
+
+setTimeout(EeveeFirst, 30000);
+
+setTimeout(EeveeSecond, 33000);
+
+setTimeout(EeveeNamingText, 37000);
+
+setTimeout(EeveeNaming, 40000);
+
+setTimeout(EeveeNamed, 43000);
+
+setTimeout(EeveeHugging, 46000);
+
+setTimeout(EeveeWalkingDownstairs, 50000);
+
+setTimeout(MomNamingText, 53000);
+
+setTimeout(MomNaming, 56000);
+
+setTimeout(MomTalkingOne, 60000);
+
+setTimeout(MomTalkingTwo, 63000);
+
+setTimeout(ThinkingOne, 66000);
+
+setTimeout(WaterSplash, 69000);
+
+setTimeout(WaterSplashTwo, 72000);
+
+setTimeout(DoorOpeningOne, 75000);
+
+setTimeout(RivalNaming, 78000);
+
+setTimeout(RivalNamingVar, 81000);
+
+setTimeout(TalkingToRival, 85000);
+
+setTimeout(TalkingToRivalTwo, 88000);
+
+setTimeout(BattleQuestionOne, 91000);
+
+setTimeout(BattleQuestionPrompt, 95000);
+
+setTimeout(BattleQuestionIf, 100000);
+
+setTimeout(BattleAttackOrDefend, 105000);
 
 
 
@@ -80,15 +303,42 @@ setTimeout(PokemonStart, 19000);
 
 
 
-// USE SET TIMEOUT TO UPDATE THE VARIABLE HERE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 </script>
 
+
+
+
+
+</head>
+
 <body>
 
 </body>
-</head>
 </html>
