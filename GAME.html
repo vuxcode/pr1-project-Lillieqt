@@ -1,0 +1,367 @@
+<html>
+<head> 
+  
+  
+  <style>
+    body {
+      background-color: orchid;
+      font-family: monospace;
+      font-size: 25px;
+      
+    }
+
+    </style>
+</head>
+
+<body>
+  
+  <p id="qwerty">   </p>
+
+
+<script>
+
+
+//Variables here in the top as Null getting updated later in the program
+
+var PlayerName = null;
+
+var EeveeName = null;
+
+var MomName = null;
+
+var RivalName = null;
+
+var BattleQuestion = null;
+
+var AttackOrDefend = null;
+
+var test = document.getElementById("qwerty");
+
+var WeedleFighting = null;
+
+
+dots();
+
+function dots() {
+  test.innerHTML+="... ... ... ...";
+  test.innerHTML+="<br>";
+  setTimeout(dotstwo, 2000);
+}
+
+function dotstwo () {
+  test.innerHTML+="... ... ... ...";
+  test.innerHTML+="<br>";
+  setTimeout(professorgreet, 2000);
+}
+
+function professorgreet() {
+  test.innerHTML+="Hello! Im professor Walnut, im the Pokemon professor in the Unnd Region!";
+  test.innerHTML+="<br>";
+  setTimeout(whatisurname, 2000);
+}
+
+function whatisurname() {
+  test.innerHTML+="What is your name?";
+  test.innerHTML+="<br>";
+  setTimeout(Playervariable, 3000);
+}
+
+function Playervariable() {
+ PlayerName = prompt("What is your name?");
+ setTimeout(Greet, 2000);
+}
+
+function Greet() {
+  test.innerHTML+="Hi "+ PlayerName +"! ";
+  setTimeout(Starting, 3000);
+}
+
+function Starting() {
+  test.innerHTML+="Are you excited for your grand pokemon adventure?";
+  test.innerHTML+="<br>";
+  test.innerHTML+="*you wake up in a warm bed in a warm house, very normal room with a nightstand and a pc*";
+  test.innerHTML+="<br>";
+  setTimeout(Waking, 4000);
+}
+
+function Waking() {
+  test.innerHTML+="*you slowly get out of bed and get on your feet.*";
+  test.innerHTML+="<br>";
+  setTimeout(PokemonStart, 3000);
+}
+
+function PokemonStart() {
+  test.innerHTML+="*You see a big blue box with a yellow ribbon on it which spells out your name, you open it and inside there is an mysterious red and white pokemonball.*";
+  test.innerHTML+="<br>";
+  setTimeout(PokemonStartTwo, 3000);
+}
+
+function PokemonStartTwo() {
+  test.innerHTML+="*there is also a letter, it says:* Hi! Since it is your 14th Birthday i figured youd like a pokemon for your grand adventure. Much love -Dad.";
+  test.innerHTML+="<br>";
+  setTimeout(PokemonPick, 3000);
+}
+
+function PokemonPick() {
+  test.innerHTML+="*Inside the pokemonball there is a pokemon, Eevee*";
+  test.innerHTML+="<br>";
+  setTimeout(EeveeFirst, 2000);
+}
+
+function EeveeFirst() {
+  test.innerHTML+="*You pick up the Red and white pokeball with Eevee inside, as you pick it up you accidentaly drop it and out comes eevee. A small brown fluffy creature.*";
+  test.innerHTML+="<br>";
+  setTimeout(EeveeSecond, 4000);
+}
+
+function EeveeSecond() {
+  test.innerHTML+="*You reach your hand down towards the small brown fluffy Eevee and pet it, Eevee Proceeds to lick your hand and smile happily.*";
+  test.innerHTML+="<br>";
+  setTimeout(EeveeNamingText, 3000);
+}
+
+function EeveeNamingText() {
+  test.innerHTML+="What would you like to name your creature?";
+  test.innerHTML+="<br>";
+  setTimeout(EeveeNaming, 3000);
+}
+
+function EeveeNaming() {
+ EeveeName = prompt("What would you like to name your Eevee?")
+ setTimeout(EeveeNamed, 2000);
+}
+
+function EeveeNamed() {
+  test.innerHTML+="Your Eevee is now named " + EeveeName + "!";
+  test.innerHTML+="<br>";
+  setTimeout(EeveeHugging, 2000);
+}
+
+function EeveeHugging() {
+  test.innerHTML+="*You pick up " + EeveeName + " And hug it close in your arms*";
+  test.innerHTML+="<br>";
+  setTimeout(EeveeWalkingDownstairs, 3000);
+}
+
+function EeveeWalkingDownstairs () {
+  test.innerHTML+="*With " + EeveeName + " in your Arms you walk downstairs and see your Mom working in the kitchen, you remember her but forget her name*";
+  test.innerHTML+="<br>";
+  setTimeout(MomNamingText, 2000);
+}
+
+function MomNamingText () {
+  test.innerHTML+="What is your Mom Named?";
+  test.innerHTML+="<br>";
+  setTimeout(MomNaming, 3000);
+}
+
+function MomNaming () {
+ MomName = prompt("What is your moms Name?");
+ setTimeout(MomTalkingOne, 2000);
+}
+
+function MomTalkingOne () {
+  test.innerHTML+="-Mom Hi! " + PlayerName + " How are you feeling?";
+  test.innerHTML+="<br>";
+  setTimeout(MomTalkingTwo, 3000);
+}
+
+function MomTalkingTwo () {
+  test.innerHTML+="-Mom Nevermind i dont have time right now i need to go run an errand, ill see you later! " + PlayerName ;
+  test.innerHTML+="<br>";
+  setTimeout(ThinkingOne, 2000);
+}
+
+function ThinkingOne () {
+  test.innerHTML+="*That was strange you think for yourself as you grab a glass of water*";
+  test.innerHTML+="<br>";
+  setTimeout(WaterSplash, 4000);
+}
+
+function WaterSplash () {
+  test.innerHTML+="*you accidentaly splash a little water on " + EeveeName + " And she jumps from your lap scared and shaking her fur to dry as she hits the ground*";
+  test.innerHTML+="<br>";
+  setTimeout(WaterSplashTwo, 4000);
+}
+
+function WaterSplashTwo () {
+  test.innerHTML+="*You look down at " + EeveeName + " and look worried as the doorbell rings, you wonder who it could be. You walk towards the door and check the peephole.*";
+  test.innerHTML+="<br>";
+  setTimeout(DoorOpeningOne, 2000);
+}
+
+function DoorOpeningOne () {
+  test.innerHTML+="*Its your cousin. Your Longtime Rival and grandson of Professor Walnut.*";
+  test.innerHTML+="<br>";
+  setTimeout(RivalNaming, 3000);
+}
+
+function RivalNaming () {
+  test.innerHTML+="What is your longtime rivals Name?";
+  test.innerHTML+="<br>";
+  setTimeout(RivalNamingVar, 2000);
+}
+
+function RivalNamingVar () {
+  RivalName = prompt("What is your Rivals Name?");
+  setTimeout(TalkingToRival, 3000);
+}
+
+function TalkingToRival () {
+  test.innerHTML+="What do you want " + RivalName + "! *You say to him through the door.*";
+  test.innerHTML+="<br>";
+  setTimeout(TalkingToRivalTwo, 2000);
+}
+
+function TalkingToRivalTwo () {
+  test.innerHTML+="*" + RivalName + " Says smugly:* Heh. Heard you got your first pokemon and im here to battle you!";
+  test.innerHTML+="<br>";
+  setTimeout(BattleQuestionOne, 3000);
+}
+
+function BattleQuestionOne () {
+  test.innerHTML+="Will you Battle me " + PlayerName  + "? (Yes, No)";
+  test.innerHTML+="<br>";
+  setTimeout(BattleQuestionPrompt, 3000);
+}
+
+function BattleQuestionPrompt () {
+  BattleQuestion = prompt("Yes or No?");
+  setTimeout(BattleQuestionIf, 3000);
+}
+ 
+function BattleQuestionIf () {
+  if (BattleQuestion === "Yes") {
+    test.innerHTML+=RivalName + " Heh, You arent Ready for this. Go Snorunt!! -" + PlayerName + " Go " + EeveeName + "!";
+    test.innerHTML+="<br>";
+    test.innerHTML+="*You slam open the door and look " + RivalName + " in the eyes*";
+    test.innerHTML+="<br>";
+    test.innerHTML+="What will you do? (Attack, Defend)";
+    test.innerHTML+="<br>";
+    setTimeout(BattleAttackOrDefend, 4000);
+   } 
+    else {
+    test.innerHTML+="You are really boring huh,, *Says " + RivalName + "*";
+    test.innerHTML+="<br>";
+    setTimeout(AfterBattle, 2000);
+    }
+    
+}
+
+function BattleAttackOrDefend () {
+  AttackOrDefend = prompt("Attack or Run?");
+      if (AttackOrDefend === "Attack") {
+        test.innerHTML+=EeveeName + " Used Tackle!";
+        test.innerHTML+="<br>";
+        test.innerHTML+=RivalName + "'s Snorunt Takes significant Damage and Faints";
+        test.innerHTML+="<br>";
+        test.innerHTML+="-" + RivalName + " H-how are you so strong, *He says as he runs away with snorunt in his hands*";
+        test.innerHTML+="<br>";
+        setTimeout(GoingOutside, 3000);
+      }
+      else {
+        test.innerHTML+="You lock the door and wait until " + RivalName + " walks away";
+        test.innerHTML+="<br>";
+        setTimeout(AfterBattle, 2000);
+      }
+      
+}
+
+function AfterBattle () {
+  test.innerHTML+="Well that was irritating hope " + RivalName + " stops bothering me for now.";
+  test.innerHTML+="<br>";
+  setTimeout(GoingOutside, 3000);
+}
+
+function GoingOutside () {
+  test.innerHTML+="*After " + RivalName + " is gone you step outside with " + EeveeName + ". The Starlys are chirping and the weather is refreshing*";
+  test.innerHTML+="<br>";
+  setTimeout(TallGrass, 2000);
+
+}
+
+function TallGrass () {
+  test.innerHTML+="*" + EeveeName + " Runs into the tall grass and you run after it, " + EeveeName + " is barking at a small weedle.*"
+  test.innerHTML+="<br>";
+  test.innerHTML+="Would you like to attack the Weedle?";
+  test.innerHTML+="<br>";
+  setTimeout(WeedleFight, 3000);
+}
+
+function WeedleFight () {
+  WeedleFighting = prompt("Yes or No");
+  if (WeedleFighting === "Yes") {
+    test.innerHTML+="*" + EeveeName + " jumps on the Weedle and uses tackle fainting the weedle in a single blow.*";
+    test.innerHTML+="<br>";
+    test.innerHTML+="*You pet " + EeveeName + "*";
+    test.innerHTML+="<br>";
+  }
+  else {
+    test.innerHTML+="*" + EeveeName + " growls and and weedle gets really scared and runs away, " + EeveeName + " Looks Proudly at you and you pet her.*"
+    test.innerHTML+="<br>";
+    test.innerHTML+="*" + EeveeName + " Smiles*";
+    test.innerHTML+="<br>";
+  }
+}
+
+
+ 
+
+
+// The setTimeouts are made for making everything go in an order 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+    
+  
+
+
+</body>
+</html>
