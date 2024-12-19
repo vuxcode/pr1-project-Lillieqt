@@ -167,13 +167,13 @@ function MomNaming () {
 }
 
 function MomTalkingOne () {
-  test.innerHTML+="-Mom Hi! " + PlayerName + " How are you feeling?";
+  test.innerHTML+="-" + MomName + " Hi! " + PlayerName + " How are you feeling?";
   test.innerHTML+="<br>";
   setTimeout(MomTalkingTwo, 3000);
 }
 
 function MomTalkingTwo () {
-  test.innerHTML+="-Mom Nevermind i dont have time right now i need to go run an errand, ill see you later! " + PlayerName ;
+  test.innerHTML+="-" + MomName + " Nevermind i dont have time right now i need to go run an errand, ill see you later! " + PlayerName ;
   test.innerHTML+="<br>";
   setTimeout(ThinkingOne, 2000);
 }
@@ -237,7 +237,8 @@ function BattleQuestionPrompt () {
 }
  
 function BattleQuestionIf () {
-  if (BattleQuestion === "Yes") {
+  BattleQuestion = (BattleQuestion.toLowerCase());
+  if (BattleQuestion === "yes") {
     test.innerHTML+=RivalName + " Heh, You arent Ready for this. Go Snorunt!! -" + PlayerName + " Go " + EeveeName + "!";
     test.innerHTML+="<br>";
     test.innerHTML+="*You slam open the door and look " + RivalName + " in the eyes*";
@@ -256,7 +257,8 @@ function BattleQuestionIf () {
 
 function BattleAttackOrDefend () {
   AttackOrDefend = prompt("Attack or Run?");
-      if (AttackOrDefend === "Attack") {
+  AttackOrDefend = (AttackOrDefend.toLowerCase());
+      if (AttackOrDefend === "attack") {
         test.innerHTML+=EeveeName + " Used Tackle!";
         test.innerHTML+="<br>";
         test.innerHTML+=RivalName + "'s Snorunt Takes significant Damage and Faints";
@@ -289,6 +291,10 @@ function GoingOutside () {
 function TallGrass () {
   test.innerHTML+="*" + EeveeName + " Runs into the tall grass and you run after it, " + EeveeName + " is barking at a small weedle.*"
   test.innerHTML+="<br>";
+  setTimeout(TallGrassTwo, 3000);
+}
+
+function TallGrassTwo () {
   test.innerHTML+="Would you like to attack the Weedle?";
   test.innerHTML+="<br>";
   setTimeout(WeedleFight, 3000);
@@ -296,7 +302,8 @@ function TallGrass () {
 
 function WeedleFight () {
   WeedleFighting = prompt("Yes or No");
-  if (WeedleFighting === "Yes") {
+  WeedleFighting = (WeedleFighting.toLowerCase());
+  if (WeedleFighting === "yes") {
     test.innerHTML+="*" + EeveeName + " jumps on the Weedle and uses tackle fainting the weedle in a single blow.*";
     test.innerHTML+="<br>";
     test.innerHTML+="*You pet " + EeveeName + "*";
@@ -315,13 +322,16 @@ function WeedleFight () {
 function ProfessorHazelInteraction () {
   test.innerHTML+="Hi there trainer! *You hear a calm voice say as you are bowed down petting " + EeveeName + "*";
   test.innerHTML+="<br>";
+  setTimeout(ProfessorHazelInteractionTwo, 3000);
+}
+
+function ProfessorHazelInteractionTwo () {
   test.innerHTML+="*You look up at the person towering over you and she says again:* Hi there trainer! Im Hazel a pokemon professor from the Sinnoh Region";
   test.innerHTML+="<br>";
   test.innerHTML+="What is your name? *she asks*";
   test.innerHTML+="<br>";
   setTimeout(ProfessorHazelTalking, 3000);
 }
-
 function ProfessorHazelTalking () {
   test.innerHTML+="*You respond* Hi! im " + PlayerName + "!";
   test.innerHTML+="<br>";
@@ -333,6 +343,10 @@ function ProfessorHazelTalking () {
 function TalkingHazel () {
   test.innerHTML+="*You think for a while*, im gonna set myself out on a great pokemon journey and this is my first step!";
   test.innerHTML+="<br>"
+  setTimeout(TalkingHazelTwo, 3000);
+}
+
+function TalkingHazelTwo () {
   test.innerHTML+="*Hazel chuckles a little* Is that so? Are you gonna become a great pokemon trainer? (Yes, No)";
   test.innerHTML+="<br>";
   setTimeout(GreatPokemonTrainerQuestion, 4000);
@@ -340,7 +354,8 @@ function TalkingHazel () {
 
 function GreatPokemonTrainerQuestion () {
   PokemonTrainer = prompt("Yes or no");
-  if (PokemonTrainer === "Yes") {
+  PokemonTrainer = (PokemonTrainer.toLowerCase());
+  if (PokemonTrainer === "yes") {
     test.innerHTML+="Well, seems like i have to teach you a bit still so you can reach ur potential *She says while smiling*";
     test.innerHTML+="<br>";
     setTimeout(TrainerQuestionYes, 4000);
@@ -376,20 +391,29 @@ function FollowingHazelIfYes () {
 function HazelPokeball () {
   test.innerHTML+="*you sneak up on a angry-looking Beedrill with hazel, she whispers in your ear:* Watch this!";
   test.innerHTML+="<br>";
+  setTimeout(HazelPokeballTwo, 3000);
+}
+
+function HazelPokeballTwo () {
   test.innerHTML+="*She throws out her Jolteon at the angry Beedrill, Quickly stuns it with Jolteons Thunder wave*";
   test.innerHTML+="<br>";
-  setTimeout(HazelCatching, 5000);
+  setTimeout(HazelCatching, 3000);
 }
 
 function HazelCatching () {
   test.innerHTML+="-Hazel, you see now when the beedrill is stunned? When Pokemon are weakened you gotta take your chance and throw a PokeBall!.";
   test.innerHTML+="<br>";
+  setTimeout(HazelCatchingTwo, 3000);
+}
+
+function HazelCatchingTwo () {
   test.innerHTML+="*She throws a Black and Yellow Pokeball at the Beedrill. The pokeBall clicks softly which indicates the pokemon was caught.*";
   test.innerHTML+="<br>";
   test.innerHTML+="*You look incredibly impressed*";
   test.innerHTML+="<br>";
   setTimeout(GivingPokeBall, 5000);
 }
+
 
 function GivingPokeBall () {
   test.innerHTML+="T-that was amazing, you say to hazel.";
@@ -402,11 +426,15 @@ function GivingPokeBall () {
 function GivingPokeBallTwo () {
   test.innerHTML+="Here you go " + PlayerName + "!, *She hands you about a dozen of pokeballs*";
   test.innerHTML+="<br>";
+  setTimeout(GivingPokeBallThree, 3000);
+}
+
+function GivingPokeBallThree () {
   test.innerHTML+="*Before you can say a word her PokeGear calls and she answers abruptly, she nods listening to the call for about a minute before saying* I Hope we meet again " + PlayerName + " I really have to go, *As she rides away on her big Jolteon.*";
   test.innerHTML+="<br>";
   test.innerHTML+="*You are left stunned in the tall grass with " + EeveeName + "*";
   test.innerHTML+="<br>";
-  setTimeout(StartingYourOwnAdventure, 5000);
+  setTimeout(StartingYourOwnAdventure, 3000);
 }
 
 function StartingYourOwnAdventure() {
@@ -425,7 +453,8 @@ function CaveOpening() {
 
 function ZubatCatching () {
   ZubatCatch = prompt("Will you catch Zubat?");
-  if (ZubatCatch === "Yes") {
+  ZubatCatch = (ZubatCatch.toLowerCase());
+  if (ZubatCatch === "yes") {
     test.innerHTML+="*" + EeveeName + " Catches your beat and runs at the Zubat before using Tackle*";
     test.innerHTML+="<br>";
     test.innerHTML+="*The Zubat is Very hurt and before it can react you throw a PokeBall at it.*"
